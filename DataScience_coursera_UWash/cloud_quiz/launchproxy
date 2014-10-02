@@ -1,0 +1,1 @@
+ssh -o "ServerAliveInterval 10" -i ~/.ssh/KeyAWS_Benitez_Hadoop.pem -ND 8888 hadoop@ec2-50-112-21-61.us-west-2.compute.amazonaws.com
