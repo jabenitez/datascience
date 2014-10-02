@@ -1,0 +1,444 @@
+summary(titanic)
+summary(Titanic)
+library(randomForest)
+train_all <- read.csv("../data/train.csv", header=TRUE, as.is=TRUE )
+test_all  <- read.csv("../data/test.csv", header=TRUE,  as.is=TRUE )
+train <- data.frame( survived=train_all$survived,#
+                     age=train_all$age,#
+                     fare=train_all$fare,#
+                     pclass=train_all$pclass,#
+                     sex=as.integer(factor(train_all$sex)) )
+test  <- data.frame( age=test_all$age,#
+                     fare=test_all$fare,#
+                     pclass=test_all$pclass,#
+                     sex=as.integer(factor(test_all$sex)) )
+plot(train$fare)
+train$fare[ is.na( train$fare) ] <- 0
+train$fare
+train
+summary(train)
+train_all <- read.csv("../data/train.csv", header=TRUE, as.is=TRUE )
+summary(train_all)
+setwd(/Users/benitez/Dropbox/coursera/DataScience/kaggle/titanic')
+setwd('/Users/benitez/Dropbox/coursera/DataScience/kaggle/titanic')
+train_all <- read.csv("../data/train.csv", header=TRUE, as.is=TRUE )
+summary(train_all)
+train_all <- read.csv("data/train.csv", header=TRUE, as.is=TRUE )
+test_all  <- read.csv("data/test.csv", header=TRUE,  as.is=TRUE )
+train <- data.frame( survived=train_all$survived,
+age=train_all$age,
+fare=train_all$fare,
+pclass=train_all$pclass,
+sex=as.integer(factor(train_all$sex)) )
+test  <- data.frame( age=test_all$age,#
+                     fare=test_all$fare,#
+                     pclass=test_all$pclass,#
+                     sex=as.integer(factor(test_all$sex)) )
+train$fare
+plot(train$fare)
+is.na(train$fare)
+is.na(train$age)
+train$age
+mean(train$age)
+train$age(is.na(train$age))
+is.na(train$age)
+train$age(is.na(train$age))
+train$age[is.na(train$age)]
+train$age[!is.na(train$age)]
+mean(train$age[!is.na(train$age)])
+train$fare[ is.na( train$fare) ]
+train$age[!is.na(train$age)]
+train$fare[!is.na(train$fare)]
+train$fare[is.na(train$fare)]
+test$fare[is.na(test$fare)]
+test$age[is.na(test$age)]
+mean(train$age[!is.na(train$age)])
+avg(train$age[!is.na(train$age)])
+ave(train$age[!is.na(train$age)])
+train$age[!is.na(train$age)]
+std(train$age[!is.na(train$age)])
+mean(train$age[!is.na(train$age)])
+summary(train$age[!is.na(train$age)])
+summary(train$fare[!is.na(train$fare)])
+train$fare[ is.na( train$fare) ] <- 30#
+test$fare[ is.na( test$fare) ]   <- 30#
+test$age[ is.na( test$age) ]     <- 28#
+train$age[ is.na( train$age) ]   <- 28
+train[,1]
+train[,-1]
+labels <- as.factor(train[,1])
+train <- train[,-1]
+train <- train[,-1]
+train <- data.frame( survived=train_all$survived,#
+                     age=train_all$age,#
+                     fare=train_all$fare,#
+                     pclass=train_all$pclass,#
+                     sex=as.integer(factor(train_all$sex)) )#
+test  <- data.frame( age=test_all$age,#
+                     fare=test_all$fare,#
+                     pclass=test_all$pclass,#
+                     sex=as.integer(factor(test_all$sex)) )
+train$fare[ is.na( train$fare) ] <- 30#
+test$fare[ is.na( test$fare) ]   <- 30#
+test$age[ is.na( test$age) ]     <- 28#
+train$age[ is.na( train$age) ]   <- 28#
+#
+labels <- as.factor(train[,1])#
+train <- train[,-1]
+rf <- randomForest(train, labels, xtest=test, ntree=5000,do.trace=TRUE)#
+predictions <- levels(labels)[rf$test$predicted]
+write(predictions, file="prediction.csv", ncolumns=1)
+?randomForest
+as.factor(1)
+as.factor(2)
+as.factor(3)
+as.factor(4)
+as.factor((1,2,3))
+as.factor([1,2,3])
+[1,2,3]
+(1,2,3)
+a=(1,2,3)
+a = (1,2,3)
+a = {1,2,3}
+a = {1, 2, 3}
+a = 1
+a = 1,2
+a = [1,2]
+a = [ 1, 2]
+a = [ 1, 2];
+a = c() 1, 2);
+a = c(1,2,3,4,5,1,1,2,3);
+a
+as.factors(a)
+as.factor(a)
+train
+train[,1]
+train[,2]
+train[,3]
+train[,4]
+train[,5]
+train[,5]
+train[,1]
+train[,0]
+train[,1]
+train[1,1]
+train[1]
+train[2]
+train[3]
+train[4]
+train[5]
+train[1]
+a
+a[1]
+a[,1]
+a[-1]
+a[-2]
+a[-4]
+a[1]
+a[-1]
+a
+train$survived
+train_all$survived
+importance(rf)
+varImpPlot(rf)
+for(i in 2,3,4,9){}
+for(i in 2,3,4,9){ print("hello")}
+for(i in c(2,3,4,9)){ print("hello")}
+for(i in c(2,3,4,9)){ print("hello") print(i*i)}
+for(i in c(2,3,4,9)){ print("hello"); print(i*i)}
+for(mtryval in c(2,4)){#
+rf <- randomForest(train, labels, xtest=test, ntree=5000, mtry=mtryval, proximity=TRUE, do.trace=TRUE)#
+}
+x=c(1,2,3,4,5,6,7)
+x(1)
+x[1]
+x[c(1,4)]
+x=c(1,2,3,1,5,6,7)
+x[c(1,4)]
+length(train_all$survived)
+indexes <- 1:lenght(train_all$survived)
+indexes <- 1:length(train_all$survived)
+length(train_all$survived)
+indexes <- 1:length(train_all$survived)
+indexes <- 1:length(train_all$survived)#
+trainindex=sample(indexes,700)#
+validationindex=setdiff(trainindex, indexes)
+validationindex
+trainindex
+length(trainindex)
+length(indexes)
+setdiff(trainindex,indexes)
+setdiff(trainindex, indexes)
+indexes(-trainindex)
+indexes[-trainindex]
+lenght(indexes[-trainindex])
+lenght(indexes[-trainindex])
+length(indexes[-trainindex])
+train <- data.frame( survived=train_all$survived[trainindex],#
+                     age=train_all$age[trainindex],#
+                     fare=train_all$fare[trainindex],#
+                     pclass=train_all$pclass[trainindex],#
+                     sex=as.integer(factor(train_all$sex[trainindex])) )
+validation <- data.frame( survived=train_all$survived[-trainindex],#
+                     age=train_all$age[-trainindex],#
+                     fare=train_all$fare[-trainindex],#
+                     pclass=train_all$pclass[-trainindex],#
+                     sex=as.integer(factor(train_all$sex[-trainindex])) )#
+test  <- data.frame( age=test_all$age,#
+                     fare=test_all$fare,#
+                     pclass=test_all$pclass,#
+                     sex=as.integer(factor(test_all$sex)) )
+train <- data.frame( survived=train_all$survived[trainindex],#
+                     age=train_all$age[trainindex],#
+                     fare=train_all$fare[trainindex],#
+                     pclass=train_all$pclass[trainindex],#
+                     sex=as.integer(factor(train_all$sex[trainindex])) )#
+validation <- data.frame( survived=train_all$survived[-trainindex],#
+                     age=train_all$age[-trainindex],#
+                     fare=train_all$fare[-trainindex],#
+                     pclass=train_all$pclass[-trainindex],#
+                     sex=as.integer(factor(train_all$sex[-trainindex])) )#
+test  <- data.frame( age=test_all$age,#
+                     fare=test_all$fare,#
+                     pclass=test_all$pclass,#
+                     sex=as.integer(factor(test_all$sex)) )#
+#
+train$fare[ is.na( train$fare) ] <- 30#
+test$fare[ is.na( test$fare) ]   <- 30#
+test$age[ is.na( test$age) ]     <- 28#
+train$age[ is.na( train$age) ]   <- 28#
+validation$fare[ is.na( train$fare) ] <- 30#
+validation$age[ is.na( train$age) ]   <- 28
+train <- data.frame( survived=train_all$survived[trainindex],#
+                     age=train_all$age[trainindex],#
+                     fare=train_all$fare[trainindex],#
+                     pclass=train_all$pclass[trainindex],#
+                     sex=as.integer(factor(train_all$sex[trainindex])) )#
+validation <- data.frame( survived=train_all$survived[-trainindex],#
+                     age=train_all$age[-trainindex],#
+                     fare=train_all$fare[-trainindex],#
+                     pclass=train_all$pclass[-trainindex],#
+                     sex=as.integer(factor(train_all$sex[-trainindex])) )#
+test  <- data.frame( age=test_all$age,#
+                     fare=test_all$fare,#
+                     pclass=test_all$pclass,#
+                     sex=as.integer(factor(test_all$sex)) )#
+#
+train$fare[ is.na( train$fare) ] <- 30#
+test$fare[ is.na( test$fare) ]   <- 30#
+test$age[ is.na( test$age) ]     <- 28#
+train$age[ is.na( train$age) ]   <- 28#
+validation$fare[ is.na( train$fare) ] <- 30#
+validation$age[ is.na( train$age) ]   <- 28
+train_all <- read.csv("data/train.csv", header=TRUE, as.is=TRUE )#
+test_all  <- read.csv("data/test.csv", header=TRUE,  as.is=TRUE )#
+indexes <- 1:length(train_all$survived)#
+trainindex=sample(indexes,700)
+train <- data.frame( survived=train_all$survived[trainindex],#
+                     age=train_all$age[trainindex],#
+                     fare=train_all$fare[trainindex],#
+                     pclass=train_all$pclass[trainindex],#
+                     sex=as.integer(factor(train_all$sex[trainindex])) )#
+validation <- data.frame( survived=train_all$survived[-trainindex],#
+                     age=train_all$age[-trainindex],#
+                     fare=train_all$fare[-trainindex],#
+                     pclass=train_all$pclass[-trainindex],#
+                     sex=as.integer(factor(train_all$sex[-trainindex])) )#
+test  <- data.frame( age=test_all$age,#
+                     fare=test_all$fare,#
+                     pclass=test_all$pclass,#
+                     sex=as.integer(factor(test_all$sex)) )
+train$fare[ is.na( train$fare) ] <- 30#
+test$fare[ is.na( test$fare) ]   <- 30#
+test$age[ is.na( test$age) ]     <- 28#
+train$age[ is.na( train$age) ]   <- 28#
+validation$fare[ is.na( validation$fare) ] <- 30#
+validation$age[ is.na( validation$age) ]   <- 28
+labels <- as.factor(train[,1])#
+labelsval <-as.factor(validation[,1])#
+train <- train[,-1]
+mtryval=2
+mynodesize=2
+myntree=500
+rf <- randomForest(train, labels, xtest=test, ntree=5000, nodesize=mynodesize, mtry=mtryval, proximity=TRUE)
+rf
+print ("paramenters", mynodesize)
+print ("paramenters"+ mynodesize)
+print ("paramenters %f", mynodesize)
+print ("paramenters %d", mynodesize)
+print ("paramenters ", mynodesize)
+print (paramenters , mynodesize)
+print (paramenters  mynodesize)
+mynodesize
+print ( mynodesize)
+print ('hello' mynodesize)
+print ('hello')
+print ('hello',\t,)
+cat ('hello',\t,)
+cat ('hello',\t)
+cat ('hello','\t')
+cat ('hello','\t',a)
+train <- data.frame( survived=train_all$survived,#
+                     age=train_all$age,#
+                     fare=train_all$fare,#
+                     pclass=train_all$pclass,#
+                     sex=as.integer(factor(train_all$sex)) )
+train$fare[ is.na( train$fare) ] <- 30#
+test$fare[ is.na( test$fare) ]   <- 30#
+test$age[ is.na( test$age) ]     <- 28#
+train$age[ is.na( train$age) ]   <- 28
+labels <- as.factor(train[,1])
+train <- train[,-1]
+for(mtryval in c(2,4)){#
+	for(mynodesize in c(1,2,5,10)){#
+		for(myntree in c(500,5000))#
+      rf <- randomForest(train, labels, xtest=test, ntree= myntree, nodesize=mynodesize, mtry=mtryval, proximity=TRUE)#
+      cat ('mtryval','\t', mtryval)#
+      cat ('mynodesize','\t', mynodesize)#
+      cat ('myntree','\t', myntree)#
+      rf#
+}#
+}
+rf
+for(mtryval in c(2,4)){#
+	for(mynodesize in c(1,2,5,10)){#
+		for(myntree in c(500,5000))#
+      rf <- randomForest(train, labels, xtest=test, ntree=myntree, nodesize=mynodesize, mtry=mtryval, proximity=TRUE)#
+      cat ('mtryval','\t', mtryval,'\n')#
+      cat ('mynodesize','\t', mynodesize, '\n')#
+      cat ('myntree','\t', myntree, '\n')#
+      print(rf)#
+}#
+}
+train$embarqued
+train$embarked
+train$age
+train
+train_all$embarked
+train_all$ticket
+train_all$parch
+train_all$sibsp
+plot(train_all$survived)
+plot(train_all$survived,train_all$age)
+plot(train_all$survived,train_all$survived)
+plot(train_all$age,train_all$survived)
+plot(train_all$embarked,train_all$survived)
+plot(train_all$sibsp,train_all$survived)
+plot(train_all$parch,train_all$survived)
+plot(train_all$sex,train_all$survived)
+plot(as.integer(factor(train_all$sex)),train_all$survived)
+plot(as.integer(factor(train_all$embarked)),train_all$survived)
+train <- data.frame( survived=train_all$survived,#
+                     age=train_all$age,#
+                     fare=train_all$fare,#
+                     pclass=train_all$pclass,#
+                     embarked=as.integer(factor(train_all$embarked)),#
+				   sibsp=train_all$sibsp,#
+				   parch=train_all$parch,#
+	                 sex=as.integer(factor(train_all$sex)) )
+test  <- data.frame( age=test_all$age,#
+                     fare=test_all$fare,#
+                     pclass=test_all$pclass,#
+                     embarked=as.integer(factor(test_all$embarked)),#
+				   sibsp=test_all$sibsp,#
+				   parch=test_all$parch,#
+                     sex=as.integer(factor(test_all$sex)) )
+train$fare[ is.na( train$fare) ] <- 30#
+test$fare[ is.na( test$fare) ]   <- 30#
+test$age[ is.na( test$age) ]     <- 28#
+train$age[ is.na( train$age) ]   <- 28
+labels <- as.factor(train[,1])#
+labelsval <-as.factor(validation[,1])#
+train <- train[,-1]
+for(mtryval in c(2,4,6)){#
+	for(mynodesize in c(1,2,5,10)){#
+		for(myntree in c(500,5000)){#
+      		rf <- randomForest(train, labels, xtest=test, ntree=myntree, nodesize=mynodesize, mtry=mtryval, proximity=TRUE)#
+		    cat ('mtryval','\t', mtryval,'\n')#
+		    cat ('mynodesize','\t', mynodesize, '\n')#
+		    cat ('myntree','\t', myntree, '\n')#
+		    print(rf)#
+}#
+}#
+}
+rf <- randomForest(train, labels, xtest=test, ntree=5000, nodesize=2, mtry=2, proximity=TRUE)
+rf
+rf <- randomForest(train, labels, xtest=test, ntree=5000, nodesize=2, mtry=2)
+rf
+rf <- randomForest(train, labels, xtest=test, ntree=5000, nodesize=2, mtry=2, proximity=TRUE)
+rf
+rf <- randomForest(train, labels, xtest=test, ntree=5000, nodesize=2, mtry=2, proximity=TRUE,importance=TRUE)
+rf
+rf <- randomForest(train, labels, xtest=test, ntree=5000, nodesize=2, mtry=2, importance=TRUE)
+rf
+rf <- randomForest(train, labels, xtest=test, ntree=5000, nodesize=2, mtry=2, proximity=TRUE)
+rf
+as.integer(factor(train_all$embarked))
+as.integer(factor(train_all$embarked))==1
+as.integer(factor(train_all$embarked))==2
+as.integer(factor(train_all$embarked))==3
+as.integer(factor(train_all$embarked))==4
+plot(as.integer(factor(train_all$embarked)))
+plot(as.integer(factor(train_all$embarked)),train_all$survived)
+library(ggplot2)
+df <- data.frame(as.integer(factor(train_all$embarked)),train_all$survived)
+ggplot(df)
+plot(as.integer(factor(train_all$embarked)),train_all$survived)
+plot(train_all$age,train_all$survived)
+plot(as.integer(factor(train_all$sex)),train_all$survived)
+help(plot)
+library(gplots)
+hist2d
+hist2d(as.integer(factor(train_all$sex)),train_all$survived)
+hist2d(as.integer(factor(train_all$sex)),train_all$survived.nbins=c(2,2))
+hist2d(as.integer(factor(train_all$sex)),train_all$survived.nbins=2))
+hist2d(as.integer(factor(train_all$sex)),train_all$survived.nbins=2)))
+hist2d(as.integer(factor(train_all$sex)),train_all$survived.nbins=2))))
+hist2d(as.integer(factor(train_all$sex)),train_all$survived,nbins=c(2,2))
+hist2d(as.integer(factor(train_all$sex)),train_all$survived,nbins=2)
+hist2d(as.integer(factor(train_all$sex))nbins=2)
+hist2d(as.integer(factor(train_all$sex)),nbins=2)
+plot(as.integer(factor(train_all$sex)),train_all$survived)
+rf <- randomForest(train, labels, xtest=test, ntree=5000, nodesize=2, mtry=2, proximity=TRUE)
+predictions <- levels(labels)[rf$test$predicted]
+write(predictions, file="prediction.csv", ncolumns=1)
+rf
+library(randomForest)#
+importance(rf)
+varImpPlot(rf)
+library(plyr)#
+library(ggplot2)
+ddply(.data=train_all, .(pclass,sex), summarize,#
+      total=length(pclass),#
+      survived=sum(survived),#
+      percentage=survived/total)#
+pclassrange <- with(train_all, min(pclass):max(pclass))#
+#
+sapply(pclassrange, function(x) with(titanic.train, summary(fare[pclass==x])))#
+#
+# ggplot(titanic.train, aes(x=fare)) + geom_histogram(binwidth=25) + facet_grid(.~pclass, scales="free_x")#
+#
+df <- ddply(train_all, .(pclass,survived), summarize,#
+                qL = quantile(fare,0.05),#
+                q1 = quantile(fare,0.20),#
+                q2 = quantile(fare,0.40),#
+                q3 = quantile(fare,0.60),#
+                q4 = quantile(fare,0.80),#
+                qR = quantile(fare,0.95))
+ddply(.data=train_all, .(pclass,sex), summarize,#
+      total=length(pclass),#
+      survived=sum(survived),#
+      percentage=survived/total)#
+pclassrange <- with(train_all, min(pclass):max(pclass))#
+#
+sapply(pclassrange, function(x) with(train_all, summary(fare[pclass==x])))#
+#
+# ggplot(titanic.train, aes(x=fare)) + geom_histogram(binwidth=25) + facet_grid(.~pclass, scales="free_x")#
+#
+df <- ddply(train_all, .(pclass,survived), summarize,#
+                qL = quantile(fare,0.05),#
+                q1 = quantile(fare,0.20),#
+                q2 = quantile(fare,0.40),#
+                q3 = quantile(fare,0.60),#
+                q4 = quantile(fare,0.80),#
+                qR = quantile(fare,0.95))
