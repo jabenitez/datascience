@@ -1,0 +1,299 @@
+boxplot(lifesplit$EAP,lifesplit$Amer, range=0, border=rainbow(2),names=c('EAP','SSA'),main="Life exp")
+,lifesplit$Amer
+lifesplit$Amer
+lifesplit$EAP
+boxplot(lifesplit$EAP[2,],lifesplit$Amer[2,])
+boxplot(lifesplit$EAP[2,],lifesplit$Amer[2,], range=0)
+lifesplit$Amer[2,]
+lifesplit$Amer[,2]
+boxplot(lifesplit$EAP[,2],lifesplit$Amer[,2], range=0)
+boxplot(lifesplit$EAP[,2],lifesplit$Amer[,2], range=0, border=rainbow(2))
+boxplot(lifesplit$EAP[,2],lifesplit$Amer[,2], range=0, border=rainbow(2), names=c('EAp',"SSA"))
+boxplot(lifedata~Region, range=0, border=rainbow(2), names=c('EAp',"SSA"))
+boxplot(lifedata~Region, range=0, border=rainbow(5) )
+boxplot(lifedata~Region)
+lifedata
+lifedata$Region
+lifedata~Region
+LifeExp~Region
+boxplot(LifeExp~Region)
+boxplot(LifeExp~Region,range=0)
+boxplot(LifeExp~Region,range=0,border=rainbow(6))
+skeleton=read.table('SkeletonData.txt')
+attach(skeleton)
+skeleton$BMI
+head(skeleton)
+skeletonplit=split(skeleton,BMI)
+colnames(skeleton)= c('Observation','Sex','BMI','Age','DGEEstiamte','DGIDiff')
+skeletonplit=split(skeleton,BMI)
+attach(skeleton)
+skeletonplit=split(skeleton,BMI)
+skeleton$BMI
+boxplot(skeleton~sex)
+boxplot(skeleton~Sex)
+head skeleton
+head(skeleton)
+boxplot(skeleton)
+skeleton=read.table('SkeletonData.txt')
+head(skeleton)
+attach(skeleton)
+boxplot(skeleton)
+boxplot(skeleton$1)
+boxplot(skeleton$2)
+boxplot(skeleton$3)
+skeleton$V1
+skeleton$V1
+skeleton$V2
+skeleton$V3
+skeleton$V4
+skeleton$BMI
+skeleton=read.table('SkeletonData.txt')
+summary(skeleton)
+attach(skeleton)
+attach(skeleton)
+head(skeleton)
+skeleton=read.table('SkeletonData.txt')
+head(skeleton)
+colnames(skeleton)=c('Observation','Sex','BMI','Age','DGEE','DGEDiff')
+head(skeleton)
+skeleton=read.table('SkeletonData.txt',header=T)
+skeleton$BMI
+boxplot(skeleton$BMI)
+head(skeleton)
+boxplot(skeleton$Observation)
+boxplot(skeleton$Observation~skeleton~sex)
+boxplot(skeleton$Observation~skeleton~Sex)
+boxplot(skeleton$Observation~skeleton$Sex)
+boxplot(skeleton$Observation~skeleton$Sex,range=0)
+boxplot(skeleton$Observation~skeleton$Sex,range=0, border=rainbow(2))
+boxplot(skeleton$Observation~skeleton$Sex border=rainbow(2))
+boxplot(skeleton$Observation~skeleton$Sex, border=rainbow(2))
+?boxplot()
+boxplot(skeleton$Observation~skeleton$Sex, border=rainbow(2))
+boxplot(skeleton$Observation~skeleton$Sex, border=rainbow(2),varwidth-T)
+boxplot(skeleton$Observation~skeleton$Sex, border=rainbow(2),varwidth=T)
+boxplot(skeleton$Observation~skeleton$Sex, border=rainbow(2),varwidth=T)
+boxplot(skeleton$Observation~skeleton$Sex, border=rainbow(2),varwidth=F)
+boxplot(skeleton$Observation~skeleton$Sex, border=rainbow(2),varwidth=T)
+boxplot(skeleton$Observation~skeleton$Sex, border=rainbow(2),varwidth=T, notch=T)
+boxplot(skeleton$Observation~skeleton$Sex, border=rainbow(2),varwidth=T, notch=T, outline=F)
+boxplot(skeleton$Observation~skeleton$Sex, border=rainbow(2),varwidth=T, notch=T, outline=T)
+boxplot(skeleton$Observation~skeleton$Sex, border=rainbow(2),varwidth=T, notch=T, outline=F)
+boxplot(skeleton$Observation~skeleton$Sex, border=rainbow(2),varwidth=T, notch=T, outline=F,border=rainbow(6))
+boxplot(skeleton$Observation~skeleton$Sex, border=rainbow(2),varwidth=T, notch=T, outline=F,border=rainbow(2))
+boxplot(skeleton$Observation~skeleton$Sex, border=rainbow(2),varwidth=T, notch=T, outline=F)
+boxplot(count ~ spray, data = InsectSprays, col = "lightgray")
+boxplot(count ~ spray, data = InsectSprays,#
+        notch = TRUE, add = TRUE, col = "blue")
+rb <- boxplot(decrease ~ treatment, data = OrchardSprays, col = "bisque")#
+title("Comparing boxplot()s and non-robust mean +/- SD")#
+#
+mn.t <- tapply(OrchardSprays$decrease, OrchardSprays$treatment, mean)#
+sd.t <- tapply(OrchardSprays$decrease, OrchardSprays$treatment, sd)#
+xi <- 0.3 + seq(rb$n)#
+points(xi, mn.t, col = "orange", pch = 18)#
+arrows(xi, mn.t - sd.t, xi, mn.t + sd.t,#
+       code = 3, col = "pink", angle = 75, length = .1)
+mat <- cbind(Uni05 = (1:100)/21, Norm = rnorm(100),#
+             `5T` = rt(100, df = 5), Gam2 = rgamma(100, shape = 2))#
+boxplot(as.data.frame(mat),#
+        main = "boxplot(as.data.frame(mat), main = ...)")#
+par(las = 1) # all axis labels horizontal#
+boxplot(as.data.frame(mat), main = "boxplot(*, horizontal = TRUE)",#
+        horizontal = TRUE)
+boxplot(len ~ dose, data = ToothGrowth,#
+        boxwex = 0.25, at = 1:3 - 0.2,#
+        subset = supp == "VC", col = "yellow",#
+        main = "Guinea Pigs' Tooth Growth",#
+        xlab = "Vitamin C dose mg",#
+        ylab = "tooth length",#
+        xlim = c(0.5, 3.5), ylim = c(0, 35), yaxs = "i")
+boxplot(len ~ dose, data = ToothGrowth, add = TRUE,#
+        boxwex = 0.25, at = 1:3 + 0.2,#
+        subset = supp == "OJ", col = "orange")
+legend(2, 9, c("Ascorbic acid", "Orange juice"),#
+       fill = c("yellow", "orange"))
+boxplot(skeleton$Observation~skeleton$Sex, border=rainbow(2),varwidth=T, notch=T, outline=F,border=rainbow(2))
+boxplot(skeleton$Observation~skeleton$Sex, border=rainbow(2),varwidth=T, notch=T, outline=F)
+boxplot(skeleton$Observation~skeleton$BMI, col="gray",varwidth=T, notch=T, outline=F)
+BMI=factor(BMI, levels=c('underweight','normal','overweight','obese'))
+Sex=factor(Sex,levels=c('1','2'),labels=c('Male','Female'))
+freqBMI = table(BMi)
+freqBMI = table(BMI)
+plot(freqBMI)
+relfreqBMI=table(BMI)/400
+cbind(freqBMI,relfreqBMI)
+freqSex=table(sex)
+freqSex=table(Sex)
+relfreqSex=table(Sex)/400
+cbind(freqSex,relfreqSex)
+library(gmodels)
+library(gmodels)
+joint = crosstable(BMI, Sex, prop, chisq=FALSE)
+joint = CrossTable(BMI, Sex, prop, chisq=FALSE)
+?CrossTable()
+joint=CrossTable(BMI, Sex)
+joint
+joint_counts=joint$t
+barplot(join_counts)
+barplot(joint_counts)
+barplot(joint_counts,beside=T)
+?barplot
+require(grDevices) # for colours#
+tN <- table(Ni <- stats::rpois(100, lambda = 5))#
+r <- barplot(tN, col = rainbow(20))
+lines(r, tN, type = "h", col = "red", lwd = 2)
+barplot(tN, space = 1.5, axisnames = FALSE,#
+        sub = "barplot(..., space= 1.5, axisnames = FALSE)")
+barplot(VADeaths, plot = FALSE)
+barplot(VADeaths, plot = FALSE, beside = TRUE)
+mp <- barplot(VADeaths) # default#
+tot <- colMeans(VADeaths)#
+text(mp, tot + 3, format(tot), xpd = TRUE, col = "blue")
+barplot(VADeaths, beside = TRUE,#
+        col = c("lightblue", "mistyrose", "lightcyan",#
+                "lavender", "cornsilk"),#
+        legend = rownames(VADeaths), ylim = c(0, 100))#
+title(main = "Death Rates in Virginia", font.main = 4)
+hh <- t(VADeaths)[, 5:1]#
+mybarcol <- "gray20"
+mp <- barplot(hh, beside = TRUE,#
+        col = c("lightblue", "mistyrose",#
+                "lightcyan", "lavender"),#
+        legend = colnames(VADeaths), ylim = c(0,100),#
+        main = "Death Rates in Virginia", font.main = 4,#
+        sub = "Faked upper 2*sigma error bars", col.sub = mybarcol,#
+        cex.names = 1.5)
+segments(mp, hh, mp, hh + 2*sqrt(1000*hh/100), col = mybarcol, lwd = 1.5)
+stopifnot(dim(mp) == dim(hh))
+mtext(side = 1, at = colMeans(mp), line = -2,#
+      text = paste("Mean", formatC(colMeans(hh))), col = "red")
+barplot(VADeaths, angle = 15+10*1:5, density = 20, col = "black",#
+        legend = rownames(VADeaths))
+title(main = list("Death Rates in Virginia", font = 4))
+barplot(VADeaths, border = "dark blue")
+barplot(tN, col = heat.colors(12), log = "y")
+barplot(tN, col = gray.colors(20), log = "xy")
+barplot(height = cbind(x = c(465, 91) / 465 * 100,#
+                       y = c(840, 200) / 840 * 100,#
+                       z = c(37, 17) / 37 * 100),#
+        beside = FALSE,#
+        width = c(465, 840, 37),#
+        col = c(1, 2),#
+        legend.text = c("A", "B"),#
+        args.legend = list(x = "topleft"))
+barplot(joint_counts)
+barplot(joint_counts, beside=T)
+barplot(joint_counts, beside=T,col=rainbo(4))
+barplot(joint_counts, beside=T,col=rainbow(4))
+barplot(joint_counts, beside=T,col=rainbow(4))
+legend('topright',c('underwe','norma','overwa','obe'))
+legend('topright',c('underwe','norma','overwa','obe'), pch=15)
+legend('topright',c('underwe','norma','overwa','obe'), pch=15,col=rainbow(4))
+barplot(joint_counts, beside=T,col=rainbow(4))
+barplot(joint_counts, beside=F,col=rainbow(4))
+BMI_give_sex=joint$prop.col
+barplot(BMI_given_sex, beside=F,col=rainbow(4))
+barplot(BMI_give_sex, beside=F,col=rainbow(4))
+?CrossTable(BMI, Sex, prop, chisq=FALSE)
+Patricia = matrix(c(23,6140,345,5673),byrow=T,ncol=2)
+Patricia
+colnames(Patricia)=c("yes","no")
+rownames(Patricia)=c('HPV Vaccine','Other')
+Patricia
+Patricia_joint = CrossTable(Patricia)
+Patricia_joint
+library(SMPracticals)
+smoking
+smoking_joint=CrossTable(smoking)
+attach(smoking)
+smoking$smoker
+CrossTable(smoking$age="18-24")
+smoking$age
+CrossTable(smoking$age)
+lifedata
+dbinom(.5,size=100)
+dbinom(.5,size=100,prob=0.5)
+dbinom(1,size=100,prob=0.5)
+dbinom(0,size=100,prob=0.5)
+dbinom(0,size=100,prob=0.5)
+dbinom(0,size=3,prob=0.5)
+x=seq(0,3)
+x
+prob_x = dbinom(x,size=3,prob=1/2)
+cbind(x,prob_x)
+plot(x,prob_x)
+plot(x,prob_x,type='h')
+x=seq(0,50)
+prob_y = dbinom(y,size=50,prob=1/2)
+y=seq(0,50)
+prob_y = dbinom(y,size=50,prob=1/2)
+ploy(y,prob_y)
+plot(y,prob_y)
+plot(y,prob_y,type='h')
+x=c(-4, 2, 4, -2, 1, 6, -3, -8, 7, 3)
+x
+var(x)
+phat=0.576
+z = qnorm(0.025,mean=0, sd=1, lower.tail=FALSE)
+ME =  z*sqrt(phat*(1-phat))
+ME =  z*sqrt(phat*(1-phat)/1000)
+ME
+phat + c(-ME,+ME)
+libray(binom)
+libray(binom)
+library(binom)
+binom.confint(576, 1000, conf.level = 0.95, methods='aymptotic')
+binom.confint(576, 1000, conf.level = 0.95, methods='asymptotic')
+binom.confint(576, 1000, conf.level = 0.95, methods='asymptotic')
+binom.confint(576, 1000, conf.level = 0.95, methods='asymptotic')
+binom.confint(856, 1000, conf.level = 0.95, methods='asymptotic')
+test.stat(0.42-0.5)/sqrt(0.5*0.5/1046)
+x=round(0.42*10.46,0)
+x
+x=round(0.42*1046,0)
+x
+binom.test(x,1045,p=0.5,alternative='less')
+binom.test(576,100,p=0.5,alternative='twosided\')
+binom.test(576,100,p=0.5,alternative='twosided')
+binom.test(576,100,p=0.5,alternative='two.sided')
+binom.test(576,1000,p=0.5,alternative='two.sided')
+setwd('/Users/benitez/learn/coursera/statistics/week5')
+agechange = read.table('surgery')
+agechange
+summary(surgery)
+summary(agechange)
+change = agechange$V1
+change
+xbar = mean (change)
+xbar
+?mean
+mean(c(1,2,3))
+mean(c(1,2,3,4))
+mean(c(1,2,3,4,5))
+mean(c(1,2,3,10,5))
+mean(c(3,4,3,4))
+mean(c(3,4,3,10))
+s2= var(change)
+n=length(change)
+t=(xbar -0)/sqrt(s2/n)
+t
+pt(t,df=n-1,lower.tail=F)
+bodytemp = read.table('bodytemp')
+temp=bodytemp$V1
+t.test(temp,mu=37,alternative='two.sided')
+t.test(temp,mu=37,alternative='two.sided',conf.level=99)
+t.test(temp,mu=37,alternative='two.sided',conf.level=0.99)
+?t.test
+t.test(1:10, y = c(7:20))
+t.test(1:10, y = c(7:20,200))
+c(7:20, 200)
+plot(extra~group, data = sleep)
+sleep
+t.test(extra~group, data=sleep)
+with(sleep, t.test(extra[group == 1], extra[group == 2])).
+with(sleep, t.test(extra[group == 1], extra[group == 2]))
+xml=c(7921,5184,8836,4761)
+xml
+summary(xml)
+(5184-6676)/(8836-4671)

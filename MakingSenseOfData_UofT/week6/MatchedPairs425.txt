@@ -1,0 +1,115 @@
+
+Matched pairs, R tutorial. 
+We've made it to week 6 and we've learned 
+a lot of things along the way, but we're 
+not quite done yet. 
+In terms of material, we are now focusing 
+on the methods required to compare two 
+samples. 
+With respect to R, we still have to learn 
+how to use R scripts. 
+Which are very useful to keep our code 
+nicely organized. 
+Let's first get acquainted with using 
+R-scripts. 
+We can create a new, blank R-script from 
+File, New Document. 
+Or from this icon. 
+And our script is essentially a text 
+document. 
+But it's special because it allows you to 
+execute code from within the file without 
+having to copy and paste, or retype 
+commands every time. 
+Shall we try a easy example first? 
+What's one plus one? 
+On a Mac, you can execute each line by 
+pressing Command and Enter. 
+Or on a Windows machine, you can press 
+F5. 
+Or we can write more code, like two plus 
+two. 
+Highlight multiple lines and execute them 
+all at once. 
+With again, pressing Command and Enter. 
+You can even insert comments by putting a 
+hash tag in front of your comment. 
+When this line is executed, R knows it is 
+a comment so it won't throw an error. 
+You can now save this file and use it 
+later. 
+Our focus today we'll be on two sample 
+confidence intervals and hypothesis tests 
+for matched or paired data. 
+You should download the R script I have 
+uploaded along with this video to follow 
+along. 
+You can now open the R-script from File, 
+Open Document. 
+You will notice that our, R-script has 
+lots of commands and comments to remind 
+us what the commands are used for. 
+We'll begin by setting our working 
+directory. 
+Reading in the data and attaching it so 
+we have access to the variable names. 
+It's always good practice to look at the 
+data before we begin working with it. 
+And we can do this with the head command. 
+It gives us a preview of the first few 
+observations. 
+Recall that for each skeleton we have the 
+Degongi error and the Suchi Brooks error, 
+making this a matched pair data set. 
+And we are interested in analyzing the 
+difference between the two methods. 
+Now, the difference is already calculated 
+for us. 
+But we could do it ourselves as well, 
+just by defining a new variable, my 
+difference, and setting it to the 
+difference between the two methods. 
+Notice that the subtraction is done 
+component-wise, or line-by-line. 
+If we view our difference and the one 
+that's part of the data set side-by-side, 
+we see that they are the same. 
+We can even double check that they are 
+equal with the double equals sign, which 
+is a logical question that returns true 
+or false, again in component-wise. 
+You'll also notice there are two NAs 
+which Allison mentioned in the lecture. 
+We can even obtain the mean and standard 
+deviation of the differences. 
+If we want to calculate anything by hand. 
+But in this case we must insert an 
+optional argument, NA.RM is equal to 
+true, which removes any NAs from the data 
+set. 
+Now since we're only analyzing the 
+difference between the two methods, we 
+have one sample yet again. 
+It's just a sample of differences. 
+So we can use t.test to test whether the 
+main difference is zero or alternatively 
+whether the two methods are equal. 
+With t.test we also have the option of 
+just inputting each data set separately. 
+And specifying that they contain paired 
+observations with the argument paired is 
+equal true. 
+These two methods produces same results. 
+The extremely small p value lets us 
+reject h o, and conclude that there is a 
+difference between the two methods. 
+R-scripts are convenient when you have a 
+lot of code to execute. 
+When you need to execute the same 
+commands over and over again. 
+Or when it's useful to have comments 
+within your code. 
+Form now on we will choose to use 
+R-scripts in our tutorials. 
+We hope you will find them very useful. 
+

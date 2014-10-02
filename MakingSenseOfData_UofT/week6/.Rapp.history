@@ -1,0 +1,250 @@
+sample(xt,12, replace=TRUE)
+sample(xt,12, replace=TRUE,c(0.2,0.8))
+sample(xt,12, replace=TRUE)
+sample(xt,12, replace=TRUE,prob=c(0.7, 0.3))
+sample(xt,1, replace=TRUE,prob=c(0.7, 0.3))
+sample(xt, replace=TRUE,prob=c(0.7, 0.3))
+sample(c(0,1), 100, replace = TRUE)
+c(0,1)
+sample(c(0,1), 10, replace = TRUE)
+print(iris_ctree)
+print(ris_ctree)
+summary(ris_ctree)
+plot(ris_ctree)
+plot(ris_ctree,type="simple")
+testPred <- predict(ris_ctree, newdata = testData)
+summary(testPred)
+plot(testPred)
+table(testPred, testData$Species)
+data("bodyfat", package = "mboost")
+dim(bodyfat)
+summary(bodyfat)
+attributes(bodyfat)
+head(bodyfat)
+set.seed(1234)
+ind<- sample(2,nrow(bodyfat),replace=TRUE,prob=c(0.7,0.3))
+?nrow
+nrow(bodyfat)
+ind
+bodyfat.train<-bodyfat[ind==1,]
+bodyfat.test<-bodyfat[ind==2,]
+library(spart)
+library(rpart)
+myFormula<-DEXfat~age+waistcirc+elbobreath+kneebreadth
+bodyfat_rpart<- rpart(myFormula,data=bodyfat.train, control=rpart.control(minsplit=10))
+myFormula<-DEXfat~age+waistcirc+elbowbreath+kneebreadth
+bodyfat_rpart<- rpart(myFormula,data=bodyfat.train, control=rpart.control(minsplit=10))
+myFormula<-DEXfat~age + waistcirc + elbowbreath+kneebreadth
+bodyfat_rpart<- rpart(myFormula,data=bodyfat.train, control=rpart.control(minsplit=10))
+myFormula<-DEXfat~age + waistcirc + elbowbreadth + kneebreadth
+bodyfat_rpart<- rpart(myFormula,data=bodyfat.train, control=rpart.control(minsplit=10))
+attributes(bodyfat_rpart)
+attributes(iris)
+print(bodyfat_rpart$cptable)
+print(bodyfat_rpart)
+plot(bodyfat_rpart)
+simpleplot(bodyfat_rpart)
+plot(bodyfat_rpart,simple)
+plot(bodyfat_rpart,type="simple")
+plot(bodyfat_rpart, type="simple")
+plot(bodyfat_rpart)
+text(bodyfat_rpart,use.n=TRUE)
+opt<-which.min(bodyfat_rpart$cptable[,"xerror"])
+cp<-bodyfat_rpart$cptable[opt,"CP"]
+bodyfat_prune<-prune(bodyfat_rpart,cp=cp)
+print(bodyfat_prune)
+DEXfat_pred<- predict(bodyfat_prune, newdata=bodyfat.test)
+xlim<-range(bodyfat$DEXfat)
+plot(DEXfat_pred-DEXfat, data = bodyfat.test, xlab = "Observed", )
+plot(DEXfat_pred-DEXfat, data = bodyfat.test, xlab = "Observed", ylab="Predicted",ylim=xlim,xlim-xlim,jitter=T)
+plot(DEXfat_pred~DEXfat, data = bodyfat.test, xlab = "Observed", ylab="Predicted",ylim=xlim,xlim-xlim,jitter=T)
+plot(DEXfat_pred ~ DEXfat, data = bodyfat.test, xlab = "Observed",ylab = "Predicted", ylim = xlim, xlim = xlim, jitter=T)
+abline(a = 0, b = 1)
+ind <- sample(2, nrow(iris), replace=TRUE, prob=c(0.7, 0.3))
+ind
+ind <- sample(2, nrow(iris), replace=TRUE, prob=c(0.7, 0.3))
+ind
+ind <- sample(10, nrow(iris), replace=TRUE, prob=c(0.7, 0.3))
+ind <- sample(3, nrow(iris), replace=TRUE, prob=c(0.7, 0.2, 0.1))
+ind
+ind <- sample(2, nrow(iris), replace=TRUE, prob=c(0.7, 0.3))
+trainData <- iris[ind==1,]
+testData <- iris[ind==2,]
+iris[1]
+iris[2]
+iris[3]
+iris[4]
+iris[5]
+iris[6]
+class(ind)
+iris[ind]
+class(ind)
+iris[ind]
+library(randomForest)
+install(randomForest)
+install.packages(randomForest)
+install.packages("randomForest")
+install(randomForest)
+library(randomForest)
+rf <- randomForest(Species ~ ., data=trainData, ntree=100, proximity=TRUE)
+table(predict(rf), trainData$Species)
+print(rf)
+show(rf)
+print(rf)
+randomForest(formula = Species ~ ., data = trainData, ntree = 100, proximity = TRUE)
+attributes(rf)
+attributes(rf$call)
+rf$call
+rf$type
+rf$predicted
+rf$confusion
+attributes(rf$call)
+attributes(rf)
+rf$votes
+attributes(rf)
+rf$mtry
+attributes(rf)
+rf$inbag
+plot(rf)
+importance(rf)
+?importance
+varImPlot(rf)
+irisPred <- predict(rf, newdata=testData)
+table(irisPred, testData$Species)
+plot(margin(rf,testData$Species))
+install.packages("RColorBrewer")
+rquire("RColorBrewer")
+require("RColorBrewer")
+plot(margin(rf,testData$Species))
+?margin()
+cpi <- read.csv("CPI.csv")
+cp1
+cpi
+show(##cpi)
+summarize(##cpi)
+year <- rep(2008:2010, each=4)
+adsf
+asdf
+cpi
+summarize(##cpi)
+;
+summarize(##cpi);
+;
+attributes(##cpi)
+;
+rep(2008:2010, each=4)
+year <- rep(2008:2010, each=4)
+quarter <- rep(1:4, 3)
+quarter
+cpi <- c(162.2, 164.6, 166.5, 166.0, 166.2, 167.0, 168.6, 169.5,171.0, 172.1, 173.3, 174.0)
+c
+cpi
+plot(cpi, xaxt="n", ylab="CPI", xlab="")
+axis(1, labels=paste(year,quarter,sep="Q"), at=1:12, las=3)
+cor(year,cpi)
+cor(quarter,cpi)
+fit <- lm(cpi ~ year + quarter)
+fit
+attributes(fit)
+residuals(fit)
+plot(fit)
+data("bodyfat", package = "mboost")
+myFormula <- DEXfat ~ age + waistcirc + hipcirc + elbowbreadth + kneebreadth
+bodyfat.glm <- glm(myFormula, family = gaussian("log"), data = bodyfat)
+summary(bodyfat.glm)
+DEXfat
+plot(bodyfat$DEXfat, pred, xlab="Observed Values", ylab="Predicted Values")
+pred <- predict(bodyfat.glm, type = "response")
+plot(bodyfat$DEXfat, pred, xlab="Observed Values", ylab="Predicted Values")
+iris2 <- iris
+iris2$Species <- NULL
+(kmeans.result <- kmeans(iris2, 3))
+table(iris$Species, kmeans.result$cluster)
+kmeans.result$cluster
+?table()
+plot(iris2[c("Sepal.Length", "Sepal.Width")], col = kmeans.result$cluster)
+points(kmeans.result$centers[,c("Sepal.Length", "Sepal.Width")], col = 1:3,pch = 8, cex=2)
+library(fpc)
+install.packages("fpc")
+library(fpc)
+pamk.result <- pamk(iris2)
+pamk.result$nc
+table(pamk.result$pamobject$clustering, iris$Species)
+layout(matrix(c(1,2),1,2))
+plot(pamk.result$pamobject)
+layout(matrix(1))
+iris2 <- iris[-5]
+ds <- dbscan(iris2, eps=0.42, MinPts=5)
+?ds()
+table(ds$cluster, iris$Species)
+plot(ds, iris2)
+?boxplot.stats
+set.seed(3147)
+x <- rnorm(100)
+summary(x)
+plot(x)
+histogram(x)
+boxplot(x)
+y <- rnorm(100)
+df <- data.frame(x, y)
+?data
+rm(x, y)
+head(df)
+plot(df)
+attach(DF)
+attach(df)
+(a <- which(x %in% boxplot.stats(x)$out))
+(b <- which(y %in% boxplot.stats(y)$out))
+detach(df)
+?attach
+plot(df)
+(outlier.list2 <- union(a,b))
+plot(df)
+points(df[outlier.list2,], col="blue", pch="x", cex=1.5)
+install.packages("caret")
+install.packages("rattle")
+rattle
+open(rattle)
+open("rattle")
+library("rattle")
+rattle()
+library("rattle")
+rattle()
+l
+summary(iris)
+install.packages(c("ada","boot","doParallel","ellipse","RColorBrewer","Snowball","ROCR","tm","twitteR","wordcloud"))
+data()
+http://www.elespectador.com/noticias/sociales/galeria-418343-inauguracion-restaurante-bohemia-cartagena#ad-image-1
+{1,-1,2,-2,3,-3}
+c(1,-1,2,-2,3,-3)
+a<-c(1,-1,2,-2,3,-3)
+summary(a)
+deviance(a)
+sd(a)
+?attach
+pwd
+1+1
+setwd('/Users/benitez/Dropbox/coursera/statistics/week6')
+skeleton = read.table('SkeletonsMatchedPairsData.txt', header=T)
+attach(skeleton)
+skeleton
+head(skeleton)
+skeleton
+head(skeleton)
+mydifference = SucheyBrooksError - DiGangiError
+cbind(mydifference, Difference)
+mydifference == Difference
+mean(Difference, na.rm=T)
+sd(Difference, na.rm=T)
+mean(Difference)
+t.test(Difference, mu=0, alternative='two.sided')
+t.test(SucheyBrooksError, DiGangiError, paired=T, mu=0, alternative='two.sided')
+helpt.test()
+help t.test()
+help(t.test())
+help(t)
+help(t.test)
+sqrt(2)
+s=(249*100+399*150)/(399+249)
+s
+10/sqrt(s/249+s/399)
