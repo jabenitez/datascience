@@ -1,0 +1,20 @@
+sudo apt-get install -y git-core
+git clone https://github.com/startup-class/setup.git
+./setup/setup.sh
+
+git clone  https://github.com/jabenitez/bitstarter.git
+
+npm install express
+
+
+
+ git remote add upstream https://github.com/jabenitez/bitstarter.git
+ git fetch upstream
+ git add testme
+ git commit testme -m "test me"
+ git push origin master
+
+wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
+heroku login  
+heroku create
+git push heroku  master

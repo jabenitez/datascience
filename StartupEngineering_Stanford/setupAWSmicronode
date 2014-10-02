@@ -1,0 +1,14 @@
+#setup git
+sudo apt-get install -y git-core
+#setup python and compilers
+sudo apt-get install -y python-software-properties python g++ make
+
+#install node
+sudo apt-get install -y nodejs
+
+#install npm
+sudo apt-get install -y npm
+npm install restler csv accounting
+
+#install emacs
+sudo apt-get install -y emacs23
